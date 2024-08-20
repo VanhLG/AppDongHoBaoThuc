@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Timer">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/bgline2">
+
+           <EditText
+               android:id="@+id/edt"
+               android:layout_width="wrap_content"
+               android:layout_height="50dp"
+               android:gravity="center"
+               android:hint="Số phút muốn hẹn giờ"
+               android:textColor="@color/black"
+               android:textSize="20dp"
+               android:layout_marginLeft="20dp"
+               android:inputType="number"/>
+          <TextView
+              android:id="@+id/txt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Nhập thời gian"
+              android:layout_below="@id/edt"
+              android:textSize="20dp"
+              android:textColor="@color/black"
+              android:layout_marginLeft="35dp" />
+
+           <Button
+               android:id="@+id/btnSet"
+               android:layout_width="70dp"
+               android:layout_height="60dp"
+               android:layout_toRightOf="@+id/edt"
+               android:background="@drawable/circle5"
+               android:layout_marginLeft="80dp"
+               android:layout_marginTop="9dp"
+               android:text="SET"
+               android:textSize="20dp" />
+       </RelativeLayout>
+  <TextView
+      android:id="@+id/time"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="00:00,00"
+      android:textSize="50dp"
+      android:textColor="@color/black"
+      android:gravity="center"
+      android:layout_marginTop="200dp" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:orientation="horizontal"
+           android:gravity="center">
+           <Button
+               android:id="@+id/btnStartPause"
+               android:layout_marginTop="20dp"
+               android:src="@drawable/ic_baseline_pause_24_two"
+               android:layout_width="100dp"
+               android:layout_height="40dp"
+               android:background="@drawable/circle6"
+               android:layout_marginRight="30dp"
+               android:text="Start"
+               android:textColor="@color/teal_200" />
+           <Button
+               android:id="@+id/btnReset"
+               android:layout_marginTop="20dp"
+               android:layout_width="100dp"
+               android:layout_height="40dp"
+               android:background="@drawable/circle5"
+               android:textColor="@color/black"
+               android:text="Reset" />
+       </LinearLayout>
+   </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp">
+        <ImageView
+            android:id="@+id/imgTm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_baseline_av_timer_24"
+            android:layout_marginLeft="15dp" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgTm"
+            android:text="Hẹn giờ"
+
+            android:textColor="@color/teal_200"
+            android:background="@color/white" />
+        <ImageView
+            android:id="@+id/imgBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_access_alarms_24"
+            android:layout_marginLeft="120dp"
+            android:layout_toRightOf="@id/imgTm"
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgTm"
+            android:layout_toRightOf="@id/button1"
+            android:text="Báo thức"
+            android:textColor="@color/xám"
+            android:background="@color/white"
+            android:layout_marginLeft="80dp" />
+        <ImageView
+            android:id="@+id/imgBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_timer_24"
+            android:layout_marginLeft="110dp"
+            android:layout_toRightOf="@id/imgBt" />
+        <Button
+            android:id="@+id/btnBamGio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgTm"
+            android:layout_toRightOf="@id/button2"
+            android:text="Bấm giờ"
+            android:textColor="@color/xám"
+            android:background="@color/white"
+            android:layout_marginLeft="70dp" />
+    </RelativeLayout>
+</FrameLayout>
